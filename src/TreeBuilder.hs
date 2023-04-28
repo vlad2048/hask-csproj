@@ -30,7 +30,7 @@ data PkgRefNod = PkgRefNod
 
 getDeps' :: PkgRefNod -> IO (PkgRefNod, [PkgRefNod])
 getDeps' pkg@PkgRefNod {level = pkgLevel} =
-    if pkgLevel > 2
+    if pkgLevel > 5
     then
         return (pkg, [])
     else
